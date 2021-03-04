@@ -29,6 +29,8 @@
         <activity android:name=".login.validarMail" />
         <activity android:name=".MainActivity" />
         <activity android:name=".paciente.MenuPaciente" />
+        <activity android:name=".admin.Registrar_medico" />
+        <activity android:name=".paciente.Historia_clinica"/>
         <activity android:name=".admin.MenuAdmin" />
         <activity android:name=".login.Presentacion">
             <intent-filter>

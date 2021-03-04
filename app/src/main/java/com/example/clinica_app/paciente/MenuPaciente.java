@@ -15,7 +15,7 @@ import com.example.clinica_app.R;
 
 public class MenuPaciente extends AppCompatActivity implements View.OnClickListener {
     Button btnSalir;
-    Button btnAgendarC;
+    Button btnAgendarC, btnHistoria;
     TextView txtNombre;
     public static final String nombrePac="nombre";
     public static final int idPac=0;
@@ -25,6 +25,7 @@ public class MenuPaciente extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_menu_paciente);
         btnSalir= (Button)findViewById(R.id.btnSalirPa);
         btnAgendarC= (Button)findViewById(R.id.btnAgendarP);
+        btnHistoria = (Button) findViewById(R.id.btnVerHC);
         //concatenación de nombre paciente
         txtNombre=(TextView)findViewById(R.id.txtNombre);
         String nombreP= getIntent().getStringExtra("nombre");
@@ -32,6 +33,7 @@ public class MenuPaciente extends AppCompatActivity implements View.OnClickListe
 
         btnSalir.setOnClickListener(this);
         btnAgendarC.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
 
     }
 
@@ -49,6 +51,10 @@ public class MenuPaciente extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(getApplicationContext(),AsignarCitaPac.class);
             startActivity(intent);
             finish();
+        }
+        else if(v.getId()==R.id.btnVerHC){
+            Intent intent = new Intent(getApplicationContext(),Historia_clinica.class);
+            startActivity(intent);
         }
     }
 

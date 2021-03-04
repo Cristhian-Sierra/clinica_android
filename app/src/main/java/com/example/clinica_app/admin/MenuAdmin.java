@@ -15,9 +15,10 @@ import android.widget.Toast;
 import com.example.clinica_app.MainActivity;
 import com.example.clinica_app.R;
 import com.example.clinica_app.login.UpdatePass;
+import com.example.clinica_app.medico.historialMedico;
 
 public class MenuAdmin extends AppCompatActivity implements View.OnClickListener {
-    Button btnSalir,btnbuscar;
+    Button btnSalir,btnbuscar, btnNuevo;
     SearchView txt_buscar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class MenuAdmin extends AppCompatActivity implements View.OnClickListener
         btnbuscar.setOnClickListener(this);
         btnSalir= (Button)findViewById(R.id.btnSalirA);
         btnSalir.setOnClickListener(this);
+        btnNuevo = (Button)findViewById(R.id.btnNuevoM);
+        btnNuevo.setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +41,10 @@ public class MenuAdmin extends AppCompatActivity implements View.OnClickListener
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
+        }
+        if (v.getId()==R.id.btnNuevoM){
+            Intent intent = new Intent(getApplicationContext(), Registrar_medico.class);
+            startActivity(intent);
         }
         if(v.getId()==R.id.btn_buscar){
 

@@ -141,6 +141,17 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnVerHC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/button_rounded"
+        android:text="Historia Clinica"
+        android:textColor="#FFF"
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/btnSalirPa"
